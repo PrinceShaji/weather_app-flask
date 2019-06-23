@@ -11,28 +11,21 @@
 
     <title>Awesome Weather App</title>
   </head>
-  <body background="{{ url_for('static', filename='images/home_bg.jpg') }}">
-    <!-- Top Navigation Bar -->
+  <body background="{{ url_for('static', filename='images/404_bg.jpg') }}">
+
+    <!-- Top Navigation bar -->
     <div>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light">
-                <a href="/" class="text-light"> <h2>Awesome Weather App</h2> </a>
+            <a href="/" class="text-light"> <h2>Awesome Weather App</h2> </a>
         </nav>
     </div>
-
-        <!-- For Displaying Weather -->
-    <div class="modal-dialog text-left">
-        <div class="col-sm-9 main-section">
-            <div class="modal-content">
-                <p class="form-control"> City Name: </p>
-                <p class="form-control"> Time: </p>
-                <p class="form-control"> Temp Max: </p>
-                <p class="form-control"> Temp Min: </p>
-                <p class="form-control"> Cloudiness: </p>
-            </div>
-        </div>
+    
+    <div class="modal-dialog container center">
+        <h1 class="text-warning custom text-center">
+            404 Not Found
+        </h1>
     </div>
 
-        <!-- Search City and Submit -->
     <form action="/" method="POST">
         <div class="modal-content modal-dialog text-left text-light">
             <input type="text" class="form-control" placeholder="Enter City Name">
