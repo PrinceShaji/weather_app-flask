@@ -17,6 +17,7 @@
     opacity: 1;
 }
 
-.custom{
-    font-size: 60px;
+.custom-bottom{
+    position: absolute;
+    bottom: 0;
 }
