@@ -19,5 +19,11 @@
 
 .custom-bottom{
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
+    left: -50%
+}
+
+.custom-bg{
+    background-color: white;
+    opacity: .5;
 }
