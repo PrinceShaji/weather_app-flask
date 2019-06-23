@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 
     <title>Awesome Weather App</title>
   </head>
@@ -21,18 +21,23 @@
     <div class="modal-dialog text-left">
         <div class="col-sm-9 main-section">
             <div class="modal-content">
-                <p class="form-control"> Hello World</p>
-                <p class="form-control"> Hello World</p>
-                <p class="form-control"> Hello World</p>
-                <p class="form-control"> Hello World</p>
+                <p class="form-control"> City Name: </p>
+                <p class="form-control"> Time: </p>
+                <p class="form-control"> Temp Max: </p>
+                <p class="form-control"> Temp Min: </p>
+                <p class="form-control"> Cloudiness: </p>
             </div>
         </div>
     </div>
 
-    <div class="custom-box text-light">
-        <h1>JKHskjahk</h1>
+    <div class="modal-content modal-dialog text-left text-light">
+        <input type="text" class="form-control" placeholder="Enter city name">
+        <button class="btn btn-success">Search</button>
+
 
     </div>
+
+    
 
 
 
