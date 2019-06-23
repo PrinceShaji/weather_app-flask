@@ -4,7 +4,6 @@
 
 import requests
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
@@ -20,4 +19,4 @@ def homepahe():
 
 
 if __name__ == "__main__":
-    pass
+    app.run(debug=True)
