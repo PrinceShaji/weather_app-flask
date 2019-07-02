@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 
-    <title>Awesome Weather App</title>
+    <title>Somewhat-Okay Weather App</title>
   </head>
+  <script>
+      
+  </script>
   <body background="{{ url_for('static', filename='images/home_bg.jpg') }}">
     <!-- Top Navigation Bar -->
     <div>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light">
-                <a href="/" class="text-light" style="text-decoration: none;"> <h2>Awesome Weather App</h2> </a>
+                <a href="/" class="text-light" style="text-decoration: none;"> <h2>Weather App</h2> </a>
         </nav>
     </div>
 
@@ -23,11 +26,11 @@
     <div class="modal-dialog text-left">
         <div class="col-sm-9 main-section">
             <div class="modal-content">
-                <p class="form-control"> City Name: </p>
-                <p class="form-control"> Time: </p>
-                <p class="form-control"> Temp Max: </p>
-                <p class="form-control"> Temp Min: </p>
-                <p class="form-control"> Cloudiness: </p>
+                <p class="form-control"> City Name: {{ vacation.selected_city }}</p>
+                <p class="form-control"> Time: {{ vacation.selected_time }}</p>
+                <p class="form-control"> Temp Max: {{ vacation.selected_tmax }}</p>
+                <p class="form-control"> Temp Min: {{ vacation.selected_tmin }}</p>
+                <p class="form-control"> Cloudiness: {{ vacation.selected_cloudiness }}</p>
             </div>
         </div>
     </div>
@@ -35,7 +38,26 @@
         <!-- Search City and Submit -->
     <form action="/" method="POST">
         <div class="modal-content modal-dialog text-left text-light">
-            <input type="text" class="form-control" placeholder="Enter City Name">
+            <input type="text" class="form-control" name="city_name"  placeholder="Enter City Name">
+
+                <select id="myDropDownList" name="select_date">
+                        <option value="{{ vacation.day1 }}">{{ vacation.day1 }} - Today</option>
+                        <option value="{{ vacation.day2 }}">{{ vacation.day2 }} - Tomorrow</option>
+                        <option value="{{ vacation.day3 }}">{{ vacation.day3 }} - Two Days From Now</option>
+                        <option value="{{ vacation.day4 }}">{{ vacation.day4 }} - Three Days From Now</option>
+                  </select>
+
+                  <select id="myDropDownList" name="select_time">
+                        <option value="00">00:00 Hrs</option>
+                        <option value="03">03:00 Hrs</option>
+                        <option value="06">06:00 Hrs</option>
+                        <option value="09">09:00 Hrs</option>
+                        <option value="12">12:00 Hrs</option>
+                        <option value="15">15:00 Hrs</option>
+                        <option value="18">18:00 Hrs</option>
+                        <option value="21">21:00 Hrs</option>
+                  </select>
+
             <button type="submit" class="btn btn-success">Search</button>
     </form>
 
