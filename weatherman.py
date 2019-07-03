@@ -24,6 +24,8 @@ class Weather:
         self.selected_tmax = ""
         self.selected_tmin = ""
         self.selected_cloudiness = ""
+        self.selected_windspeed = ""
+        self.selected_humidity = ""
         self.print_data(self.weather_data[0])
 
     def get_data(self, city_id):
@@ -127,8 +129,8 @@ class Weather:
         self.selected_time = dates['dt_txt'][-8:-1]
         self.selected_tmax = "{0:.2f}".format(dates['main']['temp_max']-273.15) + ' Celcius'
         self.selected_tmin = "{0:.2f}".format(dates['main']['temp_min']-273.15) + ' Celcius'
-        # print('Windspeed  :', dates['wind']['speed'], 'mph')
-        # print('Humidity   :', dates['main']['humidity'], '%')
+        self.selected_windspeed =  str(dates['wind']['speed']) + 'mph'
+        self.selected_humidity = str(dates['main']['humidity']) + '%'
         self.selected_cloudiness = dates['weather'][0]['description']
         # print('\n')
 
